@@ -6,10 +6,10 @@ import { ThemeToggle } from "./theme-toggle";
 const navItems = [
   { label: "Início", href: "#hero" },
   { label: "Sobre", href: "#introduction" },
-  { label: "Biodiversidade", href: "#biodiversity" },
-  { label: "Clima", href: "#climate" },
-  { label: "Ameaças", href: "#threats" },
-  { label: "Galeria", href: "#gallery" },
+  { label: "Solução", href: "#solution" },
+  { label: "Metodologia", href: "#methodology" },
+  { label: "Dados", href: "#data-sources" },
+  { label: "Resultados", href: "#results" },
 ];
 
 export default function Navigation() {
@@ -44,7 +44,7 @@ export default function Navigation() {
             <div className="flex items-center gap-2">
               <Leaf className={`w-6 h-6 ${isScrolled ? 'text-primary' : 'text-white'}`} />
               <span className={`text-xl font-bold ${isScrolled ? 'text-foreground' : 'text-white'}`}>
-                Amazônia
+                Guardiã Verde
               </span>
             </div>
             
