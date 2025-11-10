@@ -18,10 +18,10 @@ export default function HeroSection() {
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-          Floresta Amazônica
+          Guardiã Verde
         </h1>
         <p className="text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto font-light">
-          O maior tesouro natural do planeta. Explore a biodiversidade incomparável e a importância vital da Amazônia para o clima global.
+          Monitoramento de Desmatamento com Dados Abertos e Inteligência Artificial. Detectando mudanças na floresta em tempo quase real.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <Button 
@@ -30,7 +30,7 @@ export default function HeroSection() {
             className="bg-primary/90 backdrop-blur-lg border border-primary-border text-primary-foreground hover-elevate active-elevate-2"
             data-testid="button-explore"
           >
-            Explorar Agora
+            Conheça o Projeto
           </Button>
           <Button 
             size="lg"
@@ -39,7 +39,7 @@ export default function HeroSection() {
             className="backdrop-blur-lg bg-white/10 border-white/30 text-white hover-elevate active-elevate-2"
             data-testid="button-learn-more"
           >
-            Saiba Mais
+            Como Funciona
           </Button>
         </div>
       </div>

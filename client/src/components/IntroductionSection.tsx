@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Leaf, Droplets, Users } from "lucide-react";
+import { AlertTriangle, TrendingDown, Zap } from "lucide-react";
 
 export default function IntroductionSection() {
   return (
@@ -7,24 +7,25 @@ export default function IntroductionSection() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            O Pulmão do Mundo
+            O Desafio do Desmatamento no Brasil
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A Floresta Amazônica é a maior floresta tropical do mundo, abrangendo cerca de 5,5 milhões de km² 
-            e atravessando nove países da América do Sul.
+            O Brasil enfrenta pressões crescentes sobre seus biomas. Apesar das reduções recentes, 
+            o monitoramento eficaz continua essencial para proteger nossas florestas.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-base md:text-lg leading-relaxed text-foreground">
-              A Amazônia abriga aproximadamente 10% de toda a biodiversidade do planeta, 
-              incluindo milhões de espécies de plantas, animais e insetos ainda não catalogadas pela ciência.
+              Em 2024, o Brasil registrou 6.288 km² de desmatamento na Amazônia Legal, 
+              uma redução de 30,6% em relação a 2023. O Cerrado continua como o bioma mais 
+              pressionado, com 652.197 hectares desmatados.
             </p>
             <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Além de sua riqueza biológica incomparável, a floresta desempenha um papel crucial 
-              na regulação do clima global, armazenando bilhões de toneladas de carbono e 
-              produzindo cerca de 20% do oxigênio do planeta.
+              Mudanças de uso da terra responderam por 46% das emissões brutas de gases de 
+              efeito estufa do Brasil em 2023. O monitoramento rápido e eficiente é fundamental 
+              para reduzir o desmatamento ilegal e suas consequências climáticas.
             </p>
           </div>
           
@@ -32,11 +33,23 @@ export default function IntroductionSection() {
             <Card className="p-8 hover-elevate">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-md bg-primary/10">
-                  <Leaf className="w-6 h-6 text-primary" />
+                  <TrendingDown className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-card-foreground">390 Bilhões de Árvores</h3>
-                  <p className="text-muted-foreground">Estima-se que existam 16.000 espécies diferentes de árvores</p>
+                  <h3 className="text-xl font-semibold mb-2 text-card-foreground">30,6% de Redução</h3>
+                  <p className="text-muted-foreground">Queda no desmatamento da Amazônia em 2024</p>
+                </div>
+              </div>
+            </Card>
+            
+            <Card className="p-8 hover-elevate">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-md bg-destructive/10">
+                  <AlertTriangle className="w-6 h-6 text-destructive" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-card-foreground">46% das Emissões</h3>
+                  <p className="text-muted-foreground">Mudanças de uso da terra nas emissões brasileiras</p>
                 </div>
               </div>
             </Card>
@@ -44,23 +57,11 @@ export default function IntroductionSection() {
             <Card className="p-8 hover-elevate">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-md bg-primary/10">
-                  <Droplets className="w-6 h-6 text-primary" />
+                  <Zap className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-card-foreground">20% da Água Doce</h3>
-                  <p className="text-muted-foreground">A bacia amazônica contém um quinto da água doce do mundo</p>
-                </div>
-              </div>
-            </Card>
-            
-            <Card className="p-8 hover-elevate">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-md bg-primary/10">
-                  <Users className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-card-foreground">400 Povos Indígenas</h3>
-                  <p className="text-muted-foreground">Comunidades tradicionais que vivem em harmonia com a floresta há milênios</p>
+                  <h3 className="text-xl font-semibold mb-2 text-card-foreground">Resposta Rápida</h3>
+                  <p className="text-muted-foreground">Alertas em tempo quase real para fiscalização eficaz</p>
                 </div>
               </div>
             </Card>

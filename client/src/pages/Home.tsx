@@ -1,11 +1,11 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import IntroductionSection from "@/components/IntroductionSection";
-import BiodiversitySection from "@/components/BiodiversitySection";
+import SolutionSection from "@/components/SolutionSection";
 import StatisticsSection from "@/components/StatisticsSection";
-import ClimateSection from "@/components/ClimateSection";
-import ThreatsSection from "@/components/ThreatsSection";
-import GallerySection from "@/components/GallerySection";
+import MethodologySection from "@/components/MethodologySection";
+import DataSourcesSection from "@/components/DataSourcesSection";
+import ResultsSection from "@/components/ResultsSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,18 +16,18 @@ export default function Home() {
         <HeroSection />
       </div>
       <IntroductionSection />
-      <div id="biodiversity">
-        <BiodiversitySection />
+      <div id="solution">
+        <SolutionSection />
       </div>
       <StatisticsSection />
-      <div id="climate">
-        <ClimateSection />
+      <div id="methodology">
+        <MethodologySection />
       </div>
-      <div id="threats">
-        <ThreatsSection />
+      <div id="data-sources">
+        <DataSourcesSection />
       </div>
-      <div id="gallery">
-        <GallerySection />
+      <div id="results">
+        <ResultsSection />
       </div>
       <Footer />
     </div>
