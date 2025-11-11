@@ -4,37 +4,20 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Amazônia Legal",
-        "description": "Área aproximada da Amazônia Legal Brasileira"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [-73.98, -9.82],
-            [-73.98, 5.27],
-            [-44.00, 5.27],
-            [-44.00, -18.00],
-            [-60.00, -18.00],
-            [-73.98, -9.82]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Reserva Nacional do Pacaás Novos",
-        "description": "Área de conservação"
+        "name": "Área de Alerta 1",
+        "description": "Desmatamento detectado em região próxima à UC",
+        "severity": "high",
+        "area_ha": 45.3,
+        "detection_date": "2025-11-08"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [-63.5, -10.5],
-            [-63.5, -9.8],
-            [-62.8, -9.8],
-            [-62.8, -10.5],
+            [-63.5, -10.3],
+            [-63.3, -10.3],
+            [-63.3, -10.5],
             [-63.5, -10.5]
           ]
         ]
@@ -43,18 +26,87 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Parque Nacional do Jaú",
-        "description": "Área protegida na Amazônia"
+        "name": "Área de Alerta 2",
+        "description": "Possível desmatamento em zona de transição",
+        "severity": "medium",
+        "area_ha": 23.7,
+        "detection_date": "2025-11-09"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [-62.5, -2.0],
-            [-62.5, -1.0],
-            [-61.5, -1.0],
-            [-61.5, -2.0],
+            [-62.5, -1.8],
+            [-62.3, -1.8],
+            [-62.3, -2.0],
             [-62.5, -2.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Área de Alerta 3",
+        "description": "Alteração de cobertura vegetal identificada",
+        "severity": "low",
+        "area_ha": 12.1,
+        "detection_date": "2025-11-10"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-60.2, -3.5],
+            [-60.2, -3.3],
+            [-60.0, -3.3],
+            [-60.0, -3.5],
+            [-60.2, -3.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Área de Alerta 4",
+        "description": "Desmatamento crítico próximo a Terra Indígena",
+        "severity": "high",
+        "area_ha": 67.8,
+        "detection_date": "2025-11-07"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-58.5, -8.0],
+            [-58.5, -7.8],
+            [-58.3, -7.8],
+            [-58.3, -8.0],
+            [-58.5, -8.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Área de Alerta 5",
+        "description": "Mudança de uso do solo monitorada",
+        "severity": "medium",
+        "area_ha": 34.2,
+        "detection_date": "2025-11-09"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-55.0, -5.5],
+            [-55.0, -5.3],
+            [-54.8, -5.3],
+            [-54.8, -5.5],
+            [-55.0, -5.5]
           ]
         ]
       }

@@ -81,9 +81,26 @@ export default function ResultsSection() {
 
         <Card className="p-8 bg-primary/5">
           <div className="max-w-7xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-foreground text-center">
-              Próximos Passos
+            <h3 className="text-2xl font-bold mb-4 text-foreground text-center">
+              Mapa de Alertas de Desmatamento
             </h3>
+            <p className="text-base text-muted-foreground text-center mb-6 max-w-3xl mx-auto">
+              Visualize em tempo real as áreas detectadas com possível desmatamento através de análise de imagens de satélite
+            </p>
+            <div className="flex justify-center gap-6 mb-6 flex-wrap">
+              <div className="flex items-center gap-2" data-testid="legend-high">
+                <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: '#dc2626' }}></div>
+                <span className="text-sm text-muted-foreground">Severidade Alta</span>
+              </div>
+              <div className="flex items-center gap-2" data-testid="legend-medium">
+                <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: '#f59e0b' }}></div>
+                <span className="text-sm text-muted-foreground">Severidade Média</span>
+              </div>
+              <div className="flex items-center gap-2" data-testid="legend-low">
+                <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: '#fbbf24' }}></div>
+                <span className="text-sm text-muted-foreground">Severidade Baixa</span>
+              </div>
+            </div>
             <MapComponent className="h-96 w-full" geojsonUrl="/amazon-sample.geojson" />
           </div>
         </Card>
