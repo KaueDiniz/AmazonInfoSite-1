@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Target, Shield, Users, TrendingUp } from "lucide-react";
+import MapComponent from "./MapComponent";
 
 const expectedResults = [
   {
@@ -79,18 +80,11 @@ export default function ResultsSection() {
         </div>
 
         <Card className="p-8 bg-primary/5">
-          <div className="text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-foreground">
+          <div className="max-w-7xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-foreground text-center">
               Próximos Passos
             </h3>
-            <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              Desenvolvimento de séries temporais por polígono, ranking de risco por proximidade a vias/UCs/TIs, 
-              processamento em tiles para escala regional e protocolos de ética e comunicação de incerteza.
-            </p>
-            <p className="text-base text-muted-foreground leading-relaxed">
-              A consolidação técnica e institucional pode transformar a Guardiã Verde em referência 
-              reprodutível para estados e municípios.
-            </p>
+            <MapComponent className="h-96 w-full" geojsonUrl="/amazon-sample.geojson" />
           </div>
         </Card>
       </div>

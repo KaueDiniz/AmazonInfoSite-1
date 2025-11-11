@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
+import logoImage from "@assets/Captura_de_tela_2025-11-10_201230-Photoroom_1_1762819478792.png";
 
 const navItems = [
   { label: "Início", href: "#hero" },
@@ -42,7 +43,7 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <Leaf className={`w-6 h-6 ${isScrolled ? 'text-primary' : 'text-white'}`} />
+              <img src={logoImage} alt="Guardiã Verde" className="w-8 h-8 object-contain" />
               <span className={`text-xl font-bold ${isScrolled ? 'text-foreground' : 'text-white'}`}>
                 Guardiã Verde
               </span>

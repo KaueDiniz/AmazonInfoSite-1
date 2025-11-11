@@ -1,0 +1,63 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amazônia Legal",
+        "description": "Área aproximada da Amazônia Legal Brasileira"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-73.98, -9.82],
+            [-73.98, 5.27],
+            [-44.00, 5.27],
+            [-44.00, -18.00],
+            [-60.00, -18.00],
+            [-73.98, -9.82]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Reserva Nacional do Pacaás Novos",
+        "description": "Área de conservação"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-63.5, -10.5],
+            [-63.5, -9.8],
+            [-62.8, -9.8],
+            [-62.8, -10.5],
+            [-63.5, -10.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parque Nacional do Jaú",
+        "description": "Área protegida na Amazônia"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-62.5, -2.0],
+            [-62.5, -1.0],
+            [-61.5, -1.0],
+            [-61.5, -2.0],
+            [-62.5, -2.0]
+          ]
+        ]
+      }
+    }
+  ]
+}
