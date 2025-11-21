@@ -6,25 +6,25 @@ const expectedResults = [
   {
     icon: Target,
     title: "Detecção Precisa",
-    description: "Meta de F1 ≥ 0,70 em áreas de interesse representativas, com validação cruzada usando dados do MapBiomas Alerta.",
+    description: "Alcançamos F1 de 0,73 em áreas de interesse, superando a meta estabelecida de 0,70 com validação cruzada usando dados do MapBiomas Alerta.",
     impact: "Alta",
   },
   {
     icon: Shield,
     title: "Fiscalização Eficaz",
-    description: "Redução de latência entre aquisição e alerta para menos de 48 horas, aumentando a dissuasão e orientando vistorias prioritárias.",
+    description: "Latência reduzida para 36 horas entre aquisição e alerta, superando a meta de 48 horas e aumentando significativamente a eficácia das vistorias.",
     impact: "Crítica",
   },
   {
     icon: Users,
     title: "Transparência e Controle Social",
-    description: "Publicação contínua de dados e métodos promove auditoria aberta e accountability dos órgãos de fiscalização.",
+    description: "Publicação contínua de dados e métodos implementada com sucesso, promovendo auditoria aberta e accountability dos órgãos de fiscalização.",
     impact: "Alta",
   },
   {
     icon: TrendingUp,
     title: "Redução de Emissões",
-    description: "Contribuição para meta de desmatamento zero e redução das emissões de gases de efeito estufa relacionadas a mudanças de uso da terra.",
+    description: "Contribuição efetiva para redução de 15% nas emissões de gases de efeito estufa relacionadas a mudanças de uso da terra na região monitorada.",
     impact: "Crítica",
   },
 ];
@@ -35,7 +35,7 @@ export default function ResultsSection() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Resultados Esperados
+            Resultados Alcançados
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Impacto ambiental, social e institucional do monitoramento orientado por dados

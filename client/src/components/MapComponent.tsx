@@ -40,18 +40,29 @@ export default function MapComponent({ geojsonUrl, className = "h-96" }: MapComp
     }
   }, [geojsonUrl]);
 
+  const maxBounds = L.latLngBounds(
+    L.latLng(-33.75, -73.99),
+    L.latLng(5.27, -34.79)
+  );
+
   return (
     <div className={className}>
       <MapContainer
         center={[-3.4653, -62.2159]}
         zoom={5}
+        minZoom={4}
+        maxZoom={12}
+        maxBounds={maxBounds}
+        maxBoundsViscosity={1.0}
+        worldCopyJump={false}
         className="w-full h-full rounded-md"
         data-testid="map-container"
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='Imagery &copy; <a href="https://www.esri.com/">Esri</a>'
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
           maxZoom={19}
+          noWrap={true}
         />
         {geojsonData && (
           <GeoJSON
