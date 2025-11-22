@@ -55,7 +55,6 @@ const createAlertIcon = () => {
 };
 
 export default function MapComponent({ geojsonUrl, className = "h-96", onAlertAreasLoad }: MapComponentProps) {
-  const [geojsonData, setGeojsonData] = useState<any>(null);
   const [alertAreas, setAlertAreas] = useState<AlertArea[]>([]);
   const [brazilOutline, setBrazilOutline] = useState<any>(null);
 
@@ -71,8 +70,6 @@ export default function MapComponent({ geojsonUrl, className = "h-96", onAlertAr
       fetch(geojsonUrl)
         .then(response => response.json())
         .then(data => {
-          setGeojsonData(data);
-          
           const areas: AlertArea[] = data.features
             .filter((feature: any) => feature.properties.showAlert)
             .map((feature: any) => {
@@ -140,37 +137,10 @@ export default function MapComponent({ geojsonUrl, className = "h-96", onAlertAr
             data={brazilOutline}
             style={() => ({
               color: '#1a1a1a',
-              weight: 3,
-              opacity: 0.9,
+              weight: 2.5,
+              opacity: 0.85,
               fillOpacity: 0
             })}
-          />
-        )}
-        
-        {geojsonData && (
-          <GeoJSON
-            data={geojsonData}
-            style={() => ({
-              color: '#dc2626',
-              weight: 2,
-              opacity: 0.9,
-              fillColor: '#dc2626',
-              fillOpacity: 0.4
-            })}
-            onEachFeature={(feature, layer) => {
-              if (feature.properties) {
-                const { name, description, area_ha, detection_date, region } = feature.properties;
-                layer.bindPopup(`
-                  <div style="font-family: sans-serif;">
-                    <b>${name}</b><br/>
-                    ${description}<br/>
-                    <small>Região: ${region}</small><br/>
-                    <small>Área: ${area_ha} ha</small><br/>
-                    <small>Detecção: ${detection_date}</small>
-                  </div>
-                `);
-              }
-            }}
           />
         )}
         
