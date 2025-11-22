@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { Target, Shield, Users, TrendingUp } from "lucide-react";
-import MapComponent from "./MapComponent";
+import { Target, Shield, Users, TrendingUp, MapPin } from "lucide-react";
+import MapComponent, { AlertArea } from "./MapComponent";
+import { useState } from "react";
 
 const expectedResults = [
   {
@@ -30,6 +31,12 @@ const expectedResults = [
 ];
 
 export default function ResultsSection() {
+  const [alertAreas, setAlertAreas] = useState<AlertArea[]>([]);
+
+  const handleAlertAreasLoad = (areas: AlertArea[]) => {
+    setAlertAreas(areas);
+  };
+
   return (
     <section id="results" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4">
@@ -87,13 +94,48 @@ export default function ResultsSection() {
             <p className="text-base text-muted-foreground text-center mb-6 max-w-3xl mx-auto">
               Visualize em tempo real as áreas detectadas com possível desmatamento através de análise de imagens de satélite
             </p>
+            
+            {alertAreas.length > 0 && (
+              <div className="mb-6 bg-background rounded-md p-4 border">
+                <div className="flex items-center gap-2 mb-3">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <h4 className="text-base font-semibold text-foreground">
+                    Locais detectados com áreas em vermelho:
+                  </h4>
+                </div>
+                <div className="grid md:grid-cols-3 gap-3">
+                  {alertAreas.map((area, index) => (
+                    <div 
+                      key={index} 
+                      className="flex items-start gap-2 p-3 rounded-md bg-muted/50"
+                      data-testid={`location-${index}`}
+                    >
+                      <div className="w-2 h-2 rounded-full bg-destructive mt-1.5 flex-shrink-0"></div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-foreground truncate">
+                          {area.name.replace('Área de Alerta - ', '')}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {area.region}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="flex justify-center gap-6 mb-6 flex-wrap">
               <div className="flex items-center gap-2" data-testid="legend-alert">
                 <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: '#dc2626' }}></div>
                 <span className="text-sm text-muted-foreground">Áreas com suspeita de desmatamento detectadas</span>
               </div>
             </div>
-            <MapComponent className="h-96 w-full" geojsonUrl="/amazon-sample.geojson" />
+            <MapComponent 
+              className="h-96 w-full" 
+              geojsonUrl="/amazon-sample.geojson"
+              onAlertAreasLoad={handleAlertAreasLoad}
+            />
           </div>
         </Card>
       </div>

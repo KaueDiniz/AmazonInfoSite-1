@@ -15,9 +15,10 @@ L.Icon.Default.mergeOptions({
 interface MapComponentProps {
   geojsonUrl?: string;
   className?: string;
+  onAlertAreasLoad?: (areas: AlertArea[]) => void;
 }
 
-interface AlertArea {
+export interface AlertArea {
   bounds: L.LatLngBoundsExpression;
   center: [number, number];
   name: string;
@@ -53,9 +54,17 @@ const createAlertIcon = () => {
   });
 };
 
-export default function MapComponent({ geojsonUrl, className = "h-96" }: MapComponentProps) {
+export default function MapComponent({ geojsonUrl, className = "h-96", onAlertAreasLoad }: MapComponentProps) {
   const [geojsonData, setGeojsonData] = useState<any>(null);
   const [alertAreas, setAlertAreas] = useState<AlertArea[]>([]);
+  const [brazilOutline, setBrazilOutline] = useState<any>(null);
+
+  useEffect(() => {
+    fetch('/brazil-outline.geojson')
+      .then(response => response.json())
+      .then(data => setBrazilOutline(data))
+      .catch(error => console.error('Erro ao carregar contorno do Brasil:', error));
+  }, []);
 
   useEffect(() => {
     if (geojsonUrl) {
@@ -93,10 +102,13 @@ export default function MapComponent({ geojsonUrl, className = "h-96" }: MapComp
             });
           
           setAlertAreas(areas);
+          if (onAlertAreasLoad) {
+            onAlertAreasLoad(areas);
+          }
         })
         .catch(error => console.error('Erro ao carregar GeoJSON:', error));
     }
-  }, [geojsonUrl]);
+  }, [geojsonUrl, onAlertAreasLoad]);
 
   const maxBounds = L.latLngBounds(
     L.latLng(-33.75, -73.99),
@@ -122,6 +134,19 @@ export default function MapComponent({ geojsonUrl, className = "h-96" }: MapComp
           maxZoom={19}
           noWrap={true}
         />
+        
+        {brazilOutline && (
+          <GeoJSON
+            data={brazilOutline}
+            style={() => ({
+              color: '#1a1a1a',
+              weight: 3,
+              opacity: 0.9,
+              fillOpacity: 0
+            })}
+          />
+        )}
+        
         {geojsonData && (
           <GeoJSON
             data={geojsonData}

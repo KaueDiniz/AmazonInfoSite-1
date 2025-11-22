@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brasil"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-73.99, 5.27],
+            [-73.99, -33.75],
+            [-34.79, -33.75],
+            [-34.79, 5.27],
+            [-73.99, 5.27]
+          ]
+        ]
+      }
+    }
+  ]
+}
