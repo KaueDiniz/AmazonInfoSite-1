@@ -4,21 +4,22 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Área de Alerta 1",
-        "description": "Desmatamento detectado em região próxima à UC",
-        "severity": "high",
-        "area_ha": 45.3,
-        "detection_date": "2025-11-08"
+        "name": "Área de Alerta - Amazônia Ocidental",
+        "description": "Suspeita de desmatamento detectada",
+        "area_ha": 245.8,
+        "detection_date": "2025-11-15",
+        "showAlert": true,
+        "region": "Amazônia"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [-63.5, -10.5],
-            [-63.5, -10.3],
-            [-63.3, -10.3],
-            [-63.3, -10.5],
-            [-63.5, -10.5]
+            [-64.2, -4.8],
+            [-64.2, -4.5],
+            [-63.8, -4.5],
+            [-63.8, -4.8],
+            [-64.2, -4.8]
           ]
         ]
       }
@@ -26,21 +27,22 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Área de Alerta 2",
-        "description": "Possível desmatamento em zona de transição",
-        "severity": "medium",
-        "area_ha": 23.7,
-        "detection_date": "2025-11-09"
+        "name": "Área de Alerta - Cerrado",
+        "description": "Suspeita de desmatamento detectada",
+        "area_ha": 178.3,
+        "detection_date": "2025-11-14",
+        "showAlert": true,
+        "region": "Cerrado"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [-62.5, -2.0],
-            [-62.5, -1.8],
-            [-62.3, -1.8],
-            [-62.3, -2.0],
-            [-62.5, -2.0]
+            [-47.5, -14.2],
+            [-47.5, -13.9],
+            [-47.2, -13.9],
+            [-47.2, -14.2],
+            [-47.5, -14.2]
           ]
         ]
       }
@@ -48,21 +50,22 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Área de Alerta 3",
-        "description": "Alteração de cobertura vegetal identificada",
-        "severity": "low",
-        "area_ha": 12.1,
-        "detection_date": "2025-11-10"
+        "name": "Área de Alerta - MATOPIBA",
+        "description": "Suspeita de desmatamento detectada",
+        "area_ha": 312.5,
+        "detection_date": "2025-11-16",
+        "showAlert": true,
+        "region": "MATOPIBA"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [-60.2, -3.5],
-            [-60.2, -3.3],
-            [-60.0, -3.3],
-            [-60.0, -3.5],
-            [-60.2, -3.5]
+            [-45.8, -8.5],
+            [-45.8, -8.2],
+            [-45.5, -8.2],
+            [-45.5, -8.5],
+            [-45.8, -8.5]
           ]
         ]
       }
@@ -70,21 +73,22 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Área de Alerta 4",
-        "description": "Desmatamento crítico próximo a Terra Indígena",
-        "severity": "high",
-        "area_ha": 67.8,
-        "detection_date": "2025-11-07"
+        "name": "Área de Alerta - Amazônia Central",
+        "description": "Suspeita de desmatamento detectada",
+        "area_ha": 156.2,
+        "detection_date": "2025-11-13",
+        "showAlert": false,
+        "region": "Amazônia"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [-58.5, -8.0],
-            [-58.5, -7.8],
-            [-58.3, -7.8],
-            [-58.3, -8.0],
-            [-58.5, -8.0]
+            [-60.5, -3.2],
+            [-60.5, -2.9],
+            [-60.2, -2.9],
+            [-60.2, -3.2],
+            [-60.5, -3.2]
           ]
         ]
       }
@@ -92,21 +96,45 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Área de Alerta 5",
-        "description": "Mudança de uso do solo monitorada",
-        "severity": "medium",
-        "area_ha": 34.2,
-        "detection_date": "2025-11-09"
+        "name": "Área de Alerta - Cerrado Norte",
+        "description": "Suspeita de desmatamento detectada",
+        "area_ha": 89.7,
+        "detection_date": "2025-11-12",
+        "showAlert": false,
+        "region": "Cerrado"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [-55.0, -5.5],
-            [-55.0, -5.3],
-            [-54.8, -5.3],
-            [-54.8, -5.5],
-            [-55.0, -5.5]
+            [-48.2, -11.5],
+            [-48.2, -11.2],
+            [-47.9, -11.2],
+            [-47.9, -11.5],
+            [-48.2, -11.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Área de Alerta - Amazônia Sul",
+        "description": "Suspeita de desmatamento detectada",
+        "area_ha": 203.4,
+        "detection_date": "2025-11-17",
+        "showAlert": false,
+        "region": "Amazônia"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-56.8, -10.1],
+            [-56.8, -9.8],
+            [-56.5, -9.8],
+            [-56.5, -10.1],
+            [-56.8, -10.1]
           ]
         ]
       }

@@ -88,17 +88,9 @@ export default function ResultsSection() {
               Visualize em tempo real as áreas detectadas com possível desmatamento através de análise de imagens de satélite
             </p>
             <div className="flex justify-center gap-6 mb-6 flex-wrap">
-              <div className="flex items-center gap-2" data-testid="legend-high">
+              <div className="flex items-center gap-2" data-testid="legend-alert">
                 <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: '#dc2626' }}></div>
-                <span className="text-sm text-muted-foreground">Severidade Alta</span>
-              </div>
-              <div className="flex items-center gap-2" data-testid="legend-medium">
-                <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: '#f59e0b' }}></div>
-                <span className="text-sm text-muted-foreground">Severidade Média</span>
-              </div>
-              <div className="flex items-center gap-2" data-testid="legend-low">
-                <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: '#fbbf24' }}></div>
-                <span className="text-sm text-muted-foreground">Severidade Baixa</span>
+                <span className="text-sm text-muted-foreground">Áreas com suspeita de desmatamento detectadas</span>
               </div>
             </div>
             <MapComponent className="h-96 w-full" geojsonUrl="/amazon-sample.geojson" />
