@@ -9,7 +9,8 @@
         "area_ha": 245.8,
         "detection_date": "2025-11-15",
         "showAlert": true,
-        "region": "Amazônia"
+        "region": "Amazônia",
+        "location": "Eirunepé, AM"
       },
       "geometry": {
         "type": "Polygon",
@@ -32,7 +33,8 @@
         "area_ha": 178.3,
         "detection_date": "2025-11-14",
         "showAlert": true,
-        "region": "Cerrado"
+        "region": "Cerrado",
+        "location": "Brasília, DF"
       },
       "geometry": {
         "type": "Polygon",
@@ -55,7 +57,8 @@
         "area_ha": 312.5,
         "detection_date": "2025-11-16",
         "showAlert": true,
-        "region": "MATOPIBA"
+        "region": "MATOPIBA",
+        "location": "Balsas, MA"
       },
       "geometry": {
         "type": "Polygon",
@@ -78,7 +81,8 @@
         "area_ha": 156.2,
         "detection_date": "2025-11-13",
         "showAlert": false,
-        "region": "Amazônia"
+        "region": "Amazônia",
+        "location": "Manaus, AM"
       },
       "geometry": {
         "type": "Polygon",
@@ -101,7 +105,8 @@
         "area_ha": 89.7,
         "detection_date": "2025-11-12",
         "showAlert": false,
-        "region": "Cerrado"
+        "region": "Cerrado",
+        "location": "Goiânia, GO"
       },
       "geometry": {
         "type": "Polygon",
@@ -124,7 +129,8 @@
         "area_ha": 203.4,
         "detection_date": "2025-11-17",
         "showAlert": false,
-        "region": "Amazônia"
+        "region": "Amazônia",
+        "location": "Alta Floresta, MT"
       },
       "geometry": {
         "type": "Polygon",

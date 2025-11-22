@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, GeoJSON, Rectangle, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Rectangle, Marker, Popup } from 'react-leaflet';
 import { useEffect, useState } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -26,6 +26,7 @@ export interface AlertArea {
   area_ha: number;
   detection_date: string;
   region: string;
+  location: string;
 }
 
 const createAlertIcon = () => {
@@ -56,14 +57,6 @@ const createAlertIcon = () => {
 
 export default function MapComponent({ geojsonUrl, className = "h-96", onAlertAreasLoad }: MapComponentProps) {
   const [alertAreas, setAlertAreas] = useState<AlertArea[]>([]);
-  const [brazilOutline, setBrazilOutline] = useState<any>(null);
-
-  useEffect(() => {
-    fetch('/brazil-outline.geojson')
-      .then(response => response.json())
-      .then(data => setBrazilOutline(data))
-      .catch(error => console.error('Erro ao carregar contorno do Brasil:', error));
-  }, []);
 
   useEffect(() => {
     if (geojsonUrl) {
@@ -94,7 +87,8 @@ export default function MapComponent({ geojsonUrl, className = "h-96", onAlertAr
                 description: feature.properties.description,
                 area_ha: feature.properties.area_ha,
                 detection_date: feature.properties.detection_date,
-                region: feature.properties.region
+                region: feature.properties.region,
+                location: feature.properties.location || feature.properties.region
               };
             });
           
@@ -131,18 +125,6 @@ export default function MapComponent({ geojsonUrl, className = "h-96", onAlertAr
           maxZoom={19}
           noWrap={true}
         />
-        
-        {brazilOutline && (
-          <GeoJSON
-            data={brazilOutline}
-            style={() => ({
-              color: '#1a1a1a',
-              weight: 2.5,
-              opacity: 0.85,
-              fillOpacity: 0
-            })}
-          />
-        )}
         
         {alertAreas.map((area, index) => (
           <div key={`alert-${index}`}>
